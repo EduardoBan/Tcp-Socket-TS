@@ -1,0 +1,18 @@
+ npm init -y
+ npm install express
+npm install typescript ts-node @types/node @types/express --save-dev
+npm install -D typescript  
+npx tsc --init
+
+En la carpeta adonde esta installado el modulo (server-socket) pongo
+npm link
+
+luego en el proyecto lo llamo
+npm isntall
+npm link pocket-sockets
+
+npx ts-node ./src/server.js
+
+npm install -D ts-node-dev
+
+  npm install -D nodemon
