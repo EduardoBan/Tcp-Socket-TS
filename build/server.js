@@ -10,11 +10,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //   Server: listening...
 //
 require('dotenv').config();
+//import { prototype } from "events";
 const pocket_sockets_1 = require("pocket-sockets");
 console.log("pocket-sockets: TCP example");
 const serverOptions = {
     host: "localhost",
-    //const port: Number = parseInt(process.env.PORT as string, 10) || 3000
     port: parseInt(process.env.App_Port, 10) || 3000
 };
 const server = new pocket_sockets_1.TCPServer(serverOptions);

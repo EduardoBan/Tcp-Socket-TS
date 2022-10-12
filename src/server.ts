@@ -1,20 +1,9 @@
-//
-// example-tcp.ts
-//
-// Run: npx ts-node ./example/example-tcp.ts
-//
-// Expected output:
-//   pocket-sockets: TCP example
-//   Server: listening...
-//
 require('dotenv').config();
-import { prototype } from "events";
 import {TCPServer, Client} from "pocket-sockets";
  
 console.log("pocket-sockets: TCP example");
 const serverOptions = {
     host: "localhost",
-    //const port: Number = parseInt(process.env.PORT as string, 10) || 3000
     port: parseInt(<string>process.env.App_Port, 10) || 3000 
 };
 const server = new TCPServer(serverOptions);
