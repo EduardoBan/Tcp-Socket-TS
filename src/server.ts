@@ -7,22 +7,25 @@
 //   pocket-sockets: TCP example
 //   Server: listening...
 //
-
+require('dotenv').config();
+import { prototype } from "events";
 import {TCPServer, Client} from "pocket-sockets";
  
 console.log("pocket-sockets: TCP example");
 const serverOptions = {
     host: "localhost",
-    port: 8181
+    //const port: Number = parseInt(process.env.PORT as string, 10) || 3000
+    port: parseInt(process.env.App_Port as string, 10) || 3000 //7parseInt(<string>process.env.App_Port, 10) || 3000 
 };
 const server = new TCPServer(serverOptions);
 server.listen();
-console.log("Server: listening...");
+console.log("Server: puerto ENV: ",process.env.App_Port );
+console.log("Servidor escuchando puerto: "+ serverOptions.port);
 
 server.onConnection( (client: Client) => {
-    console.log("Server: socket accepted");
+    console.log("Servidor conexion aceptada IP: " + client.getRemoteAddress()?.toString());
     client.onData( (data: Buffer) => {
-        console.log("Server: incoming client data", data);
+        console.log("Server: incoming client data", data.toString());
         client.sendString("This is server: received!");
     });
     client.onClose( () => {

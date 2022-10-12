@@ -3,6 +3,10 @@
 npm install typescript ts-node @types/node @types/express --save-dev
 npm install -D typescript  
 npx tsc --init
+crea el archivo de configuracion de typescript
+lo edito y habilito:
+ "sourceMap": true,  
+ "moduleResolution": "node",  
 
 En la carpeta adonde esta installado el modulo (server-socket) pongo
 npm link
@@ -16,3 +20,21 @@ npx ts-node ./src/server.js
 npm install -D ts-node-dev
 
   npm install -D nodemon
+Ejecutar:
+npx ts-node ./src/server.ts
+node ./build/server.js
+
+Agrego la libreria Standard, para poder manejar ls variables de entorno mejor
+
+ npm i --save-dev standard
+ creo el archivo .env
+ cargo la defininiciones de las variables de entorno.
+ creo un archivo .env adonde coloco los valores de entorno. 
+ por ejemplo una definicion de puerto
+ App_Port=3333
+
+ Luego instalamos la libreria
+ 
+ npm i dotenv --save
+ 
+
