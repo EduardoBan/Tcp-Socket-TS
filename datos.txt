@@ -1,0 +1,5 @@
+Presentacion (z=p)
+/dev/CavasPerdriel/save?sx0=180&sx1=180&sx2=900&sx3=0&sx4=-64&u=CavasPerdriel&p=12345&d=1512409551&z=p
+
+Envio log de datos (z=l)
+/dev/CavasPerdriel/save?A0=19.8&A1=-24.0&A2=1.0&A3=17.2&d=1512408738;&u=CavasPerdriel&p=12345&d=1512409556&z=l
