@@ -7,12 +7,14 @@ exports.separarStr = void 0;
 let pos = 0;
 let long = 0;
 let string = '';
+// separo el string utilizando el separador '&'
 function separarStr(palabra) {
     string = borrarStr(palabra);
     let datoStr = string.split('&');
     return datoStr;
 }
 exports.separarStr = separarStr;
+//busco el simbolo ? y saco el sub string desde el simbolo hasta el final.
 function borrarStr(palabra) {
     pos = palabra.indexOf('?');
     long = palabra.length;
